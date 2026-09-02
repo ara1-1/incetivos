@@ -5,13 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿Qué es un incentivo?</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #0056b3; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 15px;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: white;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        p {
+            margin: 10px 0;
+        }
+
+        /* Estilo general para palabras con definición */
+        .def {
+            position: relative;
+            cursor: help;
+            font-weight: bold;
+            color: #1a73e8;
+        }
+
+        .def::after {
+            content: attr(data-def);
+            position: absolute;
+            left: 0;
+            bottom: 120%;
+            background: #333;
+            color: #fff;
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            width: 220px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            z-index: 10;
+        }
+
+        .def:hover::after {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
+
     <h1>¿Qué es un incentivo?</h1>
-    <p>Los incentivos son recompensas y castigos que inducen un comportamiento...</p>
-    <!-- Pega aquí el resto de tu excelente texto de los barcos británicos -->
+
+    <div class="card texto-completo">
+        <p>Los <span class="def" data-def="Algo que motiva o induce a actuar.">incentivos</span> son recompensas y castigos
+        que inducen un comportamiento.
+        Hay incentivos en todas partes.
+        Para entender bien este concepto crucial
+        tomemos un caso del año 1787, cuando el Gobierno británico
+        contrató a capitanes de barcos para llevar a Australia a reos por delitos graves.</p>
+
+        <p>Las condiciones de estos navíos eran terribles.
+        Durante uno de los viajes, más de 1/3 de los hombres murieron
+        y los sobrevivientes llegaron agotados, hambrientos y enfermos.
+        El público estaba <span class="def" data-def="Muy molesto o enfadado.">indignado</span>.
+        La prensa <span class="def" data-def="Pidió con fuerza o insistencia.">exhortó</span> por mejores condiciones.
+        La iglesia <span class="def" data-def="Pidió o rogó apelando a valores o sentimientos.">apeló</span> al sentido humanitario de los capitanes
+        y el Parlamento británico aprobó varios reglamentos
+        para asegurar un mejor trato para los presos.
+        Desafortunadamente, las propuestas de solución
+        no dieron resultados.
+        La mortalidad se mantenía escandalosamente alta.</p>
+
+        <p>Para ese entonces, existía un economista
+        que encontró una solución novedosa.
+        En vez de pagarle a los capitanes por cada prisionero que embarcaran
+        el gobierno solo pagaría por los que llegaran vivos a Australia.
+        Inmediatamente, los incentivos de los capitanes cambiaron.
+        La tasa de sobrevivencia alcanzó el 99 %.
+        Como comentó un espectador
+        "La economía triunfó sobre los sentimientos y la <span class="def" data-def="Actitud de hacer el bien y ayudar a otros.">benevolencia</span>".</p>
+
+        <p>Como puede ver, el incentivo es un concepto de enorme importancia
+        en economía que nos ayuda a predecir el comportamiento humano.
+        Sin embargo, no es el único concepto fundamental.</p>
+    </div>
+
+    <script>
+        // Doble clic en el texto: muestra definición general de incentivo
+        document.querySelector('.texto-completo').addEventListener('dblclick', function () {
+            alert('Incentivo: algo que motiva o induce a una persona a actuar de cierta manera.');
+        });
+    </script>
+
 </body>
 </html>
